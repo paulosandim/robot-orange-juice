@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation     Exemplo de uso de variáveis em Robot Framework
+Library    .venv/lib/python3.10/site-packages/robot/libraries/Collections.py
 
 *** Variables ***
 ${VARIAVEL_ESCALAR}    Paulete
@@ -30,5 +31,38 @@ Variavel Escalar
   ${resultado}    Evaluate    ${valor1} - ${valor2}
   Log To Console    Resultado: ${resultado}
 
+Variaveis Lista
+    Log To Console    ${VARIAVEL_LISTA}
+    Log To Console    ${VARIAVEL_LISTA}[0]
+    FOR    ${index}    ${item}    IN ENUMERATE    @{VARIAVEL_LISTA}
+        Log To Console    ${index}: ${item}
+    END
+    # Criando uma nova lista
+    ${listinha_mercado}    Create List    macarrao    tomate    alho    cebola
+    Log To Console    ${listinha_mercado}
+    Length Should Be    ${listinha_mercado}    4
+    # Criando lista nova versão
+    VAR    @{listinha_padaria}    pao    queijo    presunto
+    Log To Console    Listinha padaria: ${listinha_padaria}
+
+    # Manipulando a list - alterando item pelo index
+    ${listinha_padaria}[1]    Set Variable    queijo prato
+    Log To Console    Lista padaria alterada: ${listinha_padaria}
+
+    # Usando collection e alterando item pelo index
+    Set List Value    ${listinha_padaria}    1    queijo minas
+    Log To Console    Lista collections: ${listinha_padaria}
+
+    # Adicionando item na lista
+    Append To List    ${listinha_padaria}    requeijao
+    Log To Console    ${listinha_padaria}
+
+    # Removendo item da lista pelo index
+    Remove From List    ${listinha_padaria}    2
+    Log To Console    ${listinha_padaria}
+
+    # Removendo item pelo valor
+    Remove Values From List    ${listinha_padaria}    requeijao
+    Log To Console    ${listinha_padaria}
 
 
