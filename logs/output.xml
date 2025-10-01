@@ -1,91 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-01T11:31:04.832986" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-01T17:04:42.577894" rpa="false" schemaversion="5">
 <suite id="s1" name="Mercadolivre" source="/home/paulete/projetos/robot-orange-juice/mercadolivre.robot">
 <test id="s1-t1" name="Acessar Home do Mercado Livre" line="5">
 <kw name="Open Browser To Home Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-01T11:31:05.054766" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
+<msg time="2025-10-01T17:04:42.786897" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
 <arg>https://www.mercadolivre.com.br/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-01T11:31:05.053483" elapsed="3.093824"/>
+<status status="PASS" start="2025-10-01T17:04:42.785709" elapsed="3.612002"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-01T11:31:08.148214" level="INFO">De certo os testes, família!!!!</msg>
+<msg time="2025-10-01T17:04:46.407838" level="INFO">De certo os testes, família!!!!</msg>
 <arg>De certo os testes, família!!!!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-01T11:31:08.147780" elapsed="0.000602"/>
+<status status="PASS" start="2025-10-01T17:04:46.403236" elapsed="0.006967"/>
 </kw>
-<status status="PASS" start="2025-10-01T11:31:05.052137" elapsed="3.096430"/>
+<status status="PASS" start="2025-10-01T17:04:42.784432" elapsed="3.626610"/>
 </kw>
 <kw name="Home Page Should Be Open">
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-10-01T11:31:08.187921" level="INFO">Page title is 'Mercado Livre Brasil - Frete Grátis no mesmo dia'.</msg>
+<msg time="2025-10-01T17:04:46.445883" level="INFO">Page title is 'Mercado Livre Brasil - Frete Grátis no mesmo dia'.</msg>
 <arg>Mercado Livre Brasil - Frete Grátis no mesmo dia</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-10-01T11:31:08.150009" elapsed="0.038646"/>
+<status status="PASS" start="2025-10-01T17:04:46.414211" elapsed="0.032428"/>
 </kw>
-<status status="PASS" start="2025-10-01T11:31:08.149151" elapsed="0.040174"/>
+<status status="PASS" start="2025-10-01T17:04:46.411938" elapsed="0.036116"/>
 </kw>
-<status status="PASS" start="2025-10-01T11:31:05.051016" elapsed="3.139547"/>
+<status status="PASS" start="2025-10-01T17:04:42.783239" elapsed="3.673702"/>
 </test>
 <test id="s1-t2" name="Acessar Ofertas do Mercado Livre" line="9">
 <kw name="Open Browser To Home Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-01T11:31:08.210914" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
+<msg time="2025-10-01T17:04:46.464635" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
 <arg>https://www.mercadolivre.com.br/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-01T11:31:08.207026" elapsed="4.088239"/>
+<status status="PASS" start="2025-10-01T17:04:46.463815" elapsed="4.349071"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-01T11:31:12.301610" level="INFO">De certo os testes, família!!!!</msg>
+<msg time="2025-10-01T17:04:50.817283" level="INFO">De certo os testes, família!!!!</msg>
 <arg>De certo os testes, família!!!!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-01T11:31:12.297910" elapsed="0.004175"/>
+<status status="PASS" start="2025-10-01T17:04:50.814383" elapsed="0.003330"/>
 </kw>
-<status status="PASS" start="2025-10-01T11:31:08.195186" elapsed="4.107601"/>
+<status status="PASS" start="2025-10-01T17:04:46.462464" elapsed="4.355952"/>
 </kw>
 <kw name="Open Offers">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>locator=//a[text()='Ofertas']</arg>
+<arg>//a[text()='Ofertas']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-01T11:31:12.306167" elapsed="0.901112"/>
+<status status="PASS" start="2025-10-01T17:04:50.822326" elapsed="2.029811"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-10-01T11:31:13.752203" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-01T17:04:53.707065" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-10-01T11:31:13.208176" elapsed="0.544216"/>
+<status status="PASS" start="2025-10-01T17:04:52.852902" elapsed="0.854308"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-01T11:31:13.753209" level="INFO">Clicking element '//a[text()='Ofertas']'.</msg>
-<arg>locator=//a[text()='Ofertas']</arg>
+<msg time="2025-10-01T17:04:53.708080" level="INFO">Clicking element '//a[text()='Ofertas']'.</msg>
+<arg>//a[text()='Ofertas']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-01T11:31:13.752768" elapsed="0.740948"/>
+<status status="PASS" start="2025-10-01T17:04:53.707527" elapsed="1.856094"/>
 </kw>
-<status status="PASS" start="2025-10-01T11:31:12.304167" elapsed="2.189996"/>
+<status status="PASS" start="2025-10-01T17:04:50.819908" elapsed="4.744405"/>
 </kw>
 <kw name="Offer Page Should Be Open">
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-10-01T11:31:14.928064" level="INFO">Page title is 'Ofertas do dia | Mercadolivre Brasil'.</msg>
+<msg time="2025-10-01T17:04:56.344667" level="INFO">Page title is 'Ofertas do dia | Mercadolivre Brasil'.</msg>
 <arg>Ofertas do dia | Mercadolivre Brasil</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-10-01T11:31:14.496656" elapsed="0.431635"/>
+<status status="PASS" start="2025-10-01T17:04:55.572982" elapsed="0.772269"/>
 </kw>
-<status status="PASS" start="2025-10-01T11:31:14.495121" elapsed="0.433417"/>
+<status status="PASS" start="2025-10-01T17:04:55.565815" elapsed="0.780037"/>
 </kw>
-<status status="PASS" start="2025-10-01T11:31:08.192069" elapsed="6.737000"/>
+<status status="PASS" start="2025-10-01T17:04:46.461047" elapsed="9.886075"/>
 </test>
-<status status="PASS" start="2025-10-01T11:31:04.834011" elapsed="10.096223"/>
+<test id="s1-t3" name="Pesquisar Produto" line="14">
+<kw name="Open Browser To Home Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-01T17:04:56.369428" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
+<arg>https://www.mercadolivre.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-01T17:04:56.362351" elapsed="4.461673"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-01T17:05:00.834115" level="INFO">De certo os testes, família!!!!</msg>
+<arg>De certo os testes, família!!!!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-01T17:05:00.830197" elapsed="0.004914"/>
+</kw>
+<status status="PASS" start="2025-10-01T17:04:56.354667" elapsed="4.481180"/>
+</kw>
+<kw name="Type Product Name in the Search Field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-01T17:05:00.839516" level="INFO">Typing text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024' into text field '//input[contains(@type, 'text')]'.</msg>
+<arg>//input[contains(@type, 'text')]</arg>
+<arg>Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T17:05:00.838483" elapsed="4.476839"/>
+</kw>
+<status status="PASS" start="2025-10-01T17:05:00.836853" elapsed="4.479042"/>
+</kw>
+<kw name="Submit Search">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T17:05:05.318713" level="INFO">Clicking element '//button[contains(@type, 'submit')]'.</msg>
+<arg>//button[contains(@type, 'submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T17:05:05.317877" elapsed="4.197878"/>
+</kw>
+<status status="PASS" start="2025-10-01T17:05:05.316707" elapsed="4.201507"/>
+</kw>
+<kw name="Page Must Contain the product">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-01T17:05:09.739915" level="INFO">Current page contains text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024'.</msg>
+<arg>Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-01T17:05:09.527126" elapsed="0.213049"/>
+</kw>
+<status status="PASS" start="2025-10-01T17:05:09.524058" elapsed="0.216517"/>
+</kw>
+<status status="PASS" start="2025-10-01T17:04:56.349783" elapsed="13.391395"/>
+</test>
+<status status="PASS" start="2025-10-01T17:04:42.578944" elapsed="27.166651"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Mercadolivre" id="s1" pass="2" fail="0" skip="0">Mercadolivre</stat>
+<stat name="Mercadolivre" id="s1" pass="3" fail="0" skip="0">Mercadolivre</stat>
 </suite>
 </statistics>
 <errors>
