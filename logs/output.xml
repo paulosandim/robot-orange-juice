@@ -1,29 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-09-29T12:34:40.645014" rpa="false" schemaversion="5">
-<suite id="s1" name="Teste" source="/home/paulete/projetos/robot-orange-juice/teste.robot">
-<test id="s1-t1" name="Teste para demonstrar codigo Robot" line="16">
-<kw name="Exibir mensagem para uma pessoa especifica">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nSeja bem-vindo, ${name}!!!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-29T12:34:40.671877" elapsed="0.000480"/>
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-01T11:25:58.960173" rpa="false" schemaversion="5">
+<suite id="s1" name="Mercadolivre" source="/home/paulete/projetos/robot-orange-juice/mercadolivre.robot">
+<test id="s1-t1" name="Acessar Home do Mercado Livre" line="5">
+<kw name="Open Browser To Home Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-01T11:25:59.305313" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
+<arg>https://www.mercadolivre.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-01T11:25:59.304815" elapsed="3.332850"/>
 </kw>
-<arg>name=${USER_NAME}</arg>
-<status status="PASS" start="2025-09-29T12:34:40.670891" elapsed="0.001673"/>
+<status status="PASS" start="2025-10-01T11:25:59.303654" elapsed="3.337970"/>
 </kw>
-<status status="PASS" start="2025-09-29T12:34:40.669672" elapsed="0.003235"/>
+<kw name="Home Page Should Be Open">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-01T11:26:02.724599" level="INFO">Page title is 'Mercado Livre Brasil - Frete Grátis no mesmo dia'.</msg>
+<arg>Mercado Livre Brasil - Frete Grátis no mesmo dia</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-10-01T11:26:02.646669" elapsed="0.079557"/>
+</kw>
+<status status="PASS" start="2025-10-01T11:26:02.643758" elapsed="0.089022"/>
+</kw>
+<status status="PASS" start="2025-10-01T11:25:59.302564" elapsed="3.433220"/>
 </test>
-<doc>Meu primeiro código com Robot</doc>
-<status status="PASS" start="2025-09-29T12:34:40.646351" elapsed="0.027188"/>
+<test id="s1-t2" name="Acessar Ofertas do Mercado Livre" line="9">
+<kw name="Open Browser To Home Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-01T11:26:02.750654" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
+<arg>https://www.mercadolivre.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-01T11:26:02.744862" elapsed="3.899825"/>
+</kw>
+<status status="PASS" start="2025-10-01T11:26:02.742374" elapsed="3.912325"/>
+</kw>
+<kw name="Open Offers">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=//a[text()='Ofertas']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-01T11:26:06.664305" elapsed="1.040656"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T11:26:07.706632" level="INFO">Clicking element '//a[text()='Ofertas']'.</msg>
+<arg>locator=//a[text()='Ofertas']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T11:26:07.705813" elapsed="2.769564"/>
+</kw>
+<status status="PASS" start="2025-10-01T11:26:06.661402" elapsed="3.814329"/>
+</kw>
+<kw name="Offer Page Should Be Open">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-01T11:26:10.891105" level="INFO">Page title is 'Ofertas do dia | Mercadolivre Brasil'.</msg>
+<arg>Ofertas do dia | Mercadolivre Brasil</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-10-01T11:26:10.476729" elapsed="0.414557"/>
+</kw>
+<status status="PASS" start="2025-10-01T11:26:10.476166" elapsed="0.415257"/>
+</kw>
+<status status="PASS" start="2025-10-01T11:26:02.739222" elapsed="8.152584"/>
+</test>
+<status status="PASS" start="2025-10-01T11:25:58.961245" elapsed="11.931547"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Teste" id="s1" pass="1" fail="0" skip="0">Teste</stat>
+<stat name="Mercadolivre" id="s1" pass="2" fail="0" skip="0">Mercadolivre</stat>
 </suite>
 </statistics>
 <errors>
