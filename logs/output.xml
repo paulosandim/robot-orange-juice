@@ -1,253 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-01T17:55:44.601583" rpa="false" schemaversion="5">
-<suite id="s1" name="Variaveis Robot" source="/home/paulete/projetos/robot-orange-juice/variaveis_robot.robot">
-<test id="s1-t1" name="Exemplo de Uso de Variáveis" line="11">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nVariavel Escalar: ${VARIAVEL_ESCALAR}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.215261" elapsed="0.001862"/>
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-02T12:57:22.482964" rpa="false" schemaversion="5">
+<suite id="s1" name="Web" source="/home/paulete/projetos/robot-orange-juice/tests/web">
+<suite id="s1-s1" name="Home" source="/home/paulete/projetos/robot-orange-juice/tests/web/home.robot">
+<test id="s1-s1-t1" name="Acessar Home do Mercado Livre" line="5">
+<kw name="Open Browser To Home Page" owner="commom">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:22.678671" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
+<arg>${URL_BASE}</arg>
+<arg>${BROWSER}</arg>
+<arg>oprtions=${CHROME_OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-02T12:57:22.678275" elapsed="2.625853"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nVariavel Lista: ${VARIAVEL_LISTA}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.225967" elapsed="0.004253"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-02T12:57:25.310135" level="INFO">De certo os testes, família!!!!</msg>
+<arg>De certo os testes, família!!!!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-02T12:57:25.305320" elapsed="0.005129"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nPrimeiro item da lista: ${VARIAVEL_LISTA}[0]</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.230875" elapsed="0.000973"/>
+<status status="PASS" start="2025-10-02T12:57:22.677320" elapsed="2.633683"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nVariavel Dicionario: ${VARIAVEL_DICIONARIO}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.232382" elapsed="0.000806"/>
+<kw name="Home Page Should Be Open" owner="home">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:25.351651" level="INFO">Page title is 'Mercado Livre Brasil - Frete Grátis no mesmo dia'.</msg>
+<arg>Mercado Livre Brasil - Frete Grátis no mesmo dia</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-10-02T12:57:25.313660" elapsed="0.038435"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nNome do dicionario: ${VARIAVEL_DICIONARIO['nome']}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.234135" elapsed="0.017421"/>
+<status status="PASS" start="2025-10-02T12:57:25.312345" elapsed="0.040345"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nIdade do dicionario: ${VARIAVEL_DICIONARIO['idade']}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.300290" elapsed="0.011523"/>
-</kw>
-<status status="PASS" start="2025-10-01T17:55:45.212289" elapsed="0.100604"/>
+<status status="PASS" start="2025-10-02T12:57:22.676451" elapsed="2.678197"/>
 </test>
-<test id="s1-t2" name="Variavel Escalar" line="19">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${VARIAVEL_ESCALAR}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.319938" elapsed="0.003161"/>
+<status status="PASS" start="2025-10-02T12:57:22.504961" elapsed="2.852319"/>
+</suite>
+<suite id="s1-s2" name="Offer" source="/home/paulete/projetos/robot-orange-juice/tests/web/offer.robot">
+<test id="s1-s2-t1" name="Acessar Ofertas do Mercado Livre" line="6">
+<kw name="Open Browser To Home Page" owner="commom">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:25.412138" level="INFO">Using existing browser from index 1.</msg>
+<msg time="2025-10-02T12:57:25.412491" level="INFO">Opening url 'https://www.mercadolivre.com.br/'</msg>
+<arg>${URL_BASE}</arg>
+<arg>${BROWSER}</arg>
+<arg>oprtions=${CHROME_OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-02T12:57:25.409645" elapsed="1.135735"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-01T17:55:45.335567" level="INFO">${comunidade} = Orange Juice</msg>
-<var>${comunidade}</var>
-<arg>Orange Juice</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.332759" elapsed="0.003012"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-02T12:57:26.551154" level="INFO">De certo os testes, família!!!!</msg>
+<arg>De certo os testes, família!!!!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-02T12:57:26.550183" elapsed="0.001215"/>
 </kw>
-<variable name="${nome}">
-<msg time="2025-10-01T17:55:45.337086" level="INFO">${nome} = Paulete</msg>
-<var>Paulete</var>
-<status status="PASS" start="2025-10-01T17:55:45.336305" elapsed="0.001062"/>
-</variable>
-<variable name="${sobrenome}">
-<msg time="2025-10-01T17:55:45.338691" level="INFO">${sobrenome} = Sandim</msg>
-<var>Sandim</var>
-<status status="PASS" start="2025-10-01T17:55:45.338151" elapsed="0.000763"/>
-</variable>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nChamando 2 variaveis: ${nome} ${sobrenome}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.345013" elapsed="0.010375"/>
+<status status="PASS" start="2025-10-02T12:57:25.396397" elapsed="1.155299"/>
 </kw>
-<variable name="${nome_completo}">
-<msg time="2025-10-01T17:55:45.356758" level="INFO">${nome_completo} = Paulete Sandim</msg>
-<var>${nome} ${sobrenome}</var>
-<status status="PASS" start="2025-10-01T17:55:45.356144" elapsed="0.000755"/>
-</variable>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nConcatenando as 2 variaveis: ${nome_completo} - ${comunidade}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.361016" elapsed="0.005313"/>
+<kw name="Open Offers" owner="offer">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[text()='Ofertas']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-02T12:57:26.553695" elapsed="0.944020"/>
 </kw>
-<variable name="${valor1}">
-<msg time="2025-10-01T17:55:45.368623" level="INFO">${valor1} = 5</msg>
-<var>5</var>
-<status status="PASS" start="2025-10-01T17:55:45.368042" elapsed="0.000783"/>
-</variable>
-<variable name="${valor2}">
-<msg time="2025-10-01T17:55:45.370912" level="INFO">${valor2} = 1</msg>
-<var>1</var>
-<status status="PASS" start="2025-10-01T17:55:45.370244" elapsed="0.001412"/>
-</variable>
-<variable name="${resultado}">
-<msg time="2025-10-01T17:55:45.376074" level="INFO">${resultado} = 5 - 1</msg>
-<var>${valor1} - ${valor2}</var>
-<status status="PASS" start="2025-10-01T17:55:45.375008" elapsed="0.001340"/>
-</variable>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Resultado: ${resultado}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.377486" elapsed="0.004902"/>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:27.676336" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-02T12:57:27.498059" elapsed="0.178417"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-01T17:55:45.397197" level="INFO">${resultado} = 4</msg>
-<var>${resultado}</var>
-<arg>${valor1} - ${valor2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.393414" elapsed="0.004538"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:27.677032" level="INFO">Clicking element '//a[text()='Ofertas']'.</msg>
+<arg>//a[text()='Ofertas']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T12:57:27.676698" elapsed="0.724567"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Resultado: ${resultado}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.400279" elapsed="0.084377"/>
+<status status="PASS" start="2025-10-02T12:57:26.552737" elapsed="1.849058"/>
 </kw>
-<status status="PASS" start="2025-10-01T17:55:45.315824" elapsed="0.171061"/>
+<kw name="Offer Page Should Be Open" owner="offer">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:28.626005" level="INFO">Page title is 'Ofertas do dia | Mercadolivre Brasil'.</msg>
+<arg>Ofertas do dia | Mercadolivre Brasil</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-10-02T12:57:28.404673" elapsed="0.221550"/>
+</kw>
+<status status="PASS" start="2025-10-02T12:57:28.402756" elapsed="0.223743"/>
+</kw>
+<status status="PASS" start="2025-10-02T12:57:25.392249" elapsed="3.234732"/>
 </test>
-<test id="s1-t3" name="Variaveis Lista" line="34">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${VARIAVEL_LISTA}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.496171" elapsed="0.008310"/>
+<status status="PASS" start="2025-10-02T12:57:25.360885" elapsed="3.266971"/>
+</suite>
+<suite id="s1-s3" name="Search" source="/home/paulete/projetos/robot-orange-juice/tests/web/search.robot">
+<test id="s1-s3-t1" name="Pesquisar Produto" line="5">
+<kw name="Open Browser To Home Page" owner="commom">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:28.640680" level="INFO">Using existing browser from index 1.</msg>
+<msg time="2025-10-02T12:57:28.640753" level="INFO">Opening url 'https://www.mercadolivre.com.br/'</msg>
+<arg>${URL_BASE}</arg>
+<arg>${BROWSER}</arg>
+<arg>oprtions=${CHROME_OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-02T12:57:28.640207" elapsed="1.224636"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${VARIAVEL_LISTA}[0]</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.507462" elapsed="0.009980"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-02T12:57:29.865411" level="INFO">De certo os testes, família!!!!</msg>
+<arg>De certo os testes, família!!!!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-02T12:57:29.865117" elapsed="0.000407"/>
 </kw>
-<for flavor="IN ENUMERATE">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${index}: ${item}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.526748" elapsed="0.007493"/>
+<status status="PASS" start="2025-10-02T12:57:28.639509" elapsed="1.226262"/>
 </kw>
-<var name="${index}">0</var>
-<var name="${item}">Maçã</var>
-<status status="PASS" start="2025-10-01T17:55:45.525536" elapsed="0.016332"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${index}: ${item}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.544132" elapsed="0.004840"/>
+<kw name="Type Product Name in the Search Field" owner="search">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:29.868344" level="INFO">Typing text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024' into text field '//input[contains(@type, 'text')]'.</msg>
+<arg>//input[contains(@type, 'text')]</arg>
+<arg>Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T12:57:29.867605" elapsed="1.136949"/>
 </kw>
-<var name="${index}">1</var>
-<var name="${item}">Banana</var>
-<status status="PASS" start="2025-10-01T17:55:45.542906" elapsed="0.006424"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${index}: ${item}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.561094" elapsed="0.002874"/>
+<status status="PASS" start="2025-10-02T12:57:29.866504" elapsed="1.138293"/>
 </kw>
-<var name="${index}">2</var>
-<var name="${item}">Laranja</var>
-<status status="PASS" start="2025-10-01T17:55:45.550046" elapsed="0.014246"/>
-</iter>
-<var>${index}</var>
-<var>${item}</var>
-<value>@{VARIAVEL_LISTA}</value>
-<status status="PASS" start="2025-10-01T17:55:45.520804" elapsed="0.043778"/>
-</for>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2025-10-01T17:55:45.578759" level="INFO">${listinha_mercado} = ['macarrao', 'tomate', 'alho', 'cebola']</msg>
-<var>${listinha_mercado}</var>
-<arg>macarrao</arg>
-<arg>tomate</arg>
-<arg>alho</arg>
-<arg>cebola</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.573922" elapsed="0.005439"/>
+<kw name="Submit Search" owner="search">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:31.006797" level="INFO">Clicking element '//button[contains(@type, 'submit')]'.</msg>
+<arg>//button[contains(@type, 'submit')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T12:57:31.005916" elapsed="2.173565"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${listinha_mercado}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.581477" elapsed="0.001713"/>
+<status status="PASS" start="2025-10-02T12:57:31.005353" elapsed="2.178606"/>
 </kw>
-<kw name="Length Should Be" owner="BuiltIn">
-<msg time="2025-10-01T17:55:45.599339" level="INFO">Length is 4.</msg>
-<arg>${listinha_mercado}</arg>
-<arg>4</arg>
-<doc>Verifies that the length of the given item is correct.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.597070" elapsed="0.004088"/>
+<kw name="Page Must Contain the product" owner="search">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-02T12:57:33.393121" level="INFO">Current page contains text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024'.</msg>
+<arg>Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-02T12:57:33.187813" elapsed="0.205608"/>
 </kw>
-<variable name="@{listinha_padaria}">
-<msg time="2025-10-01T17:55:45.602296" level="INFO">@{listinha_padaria} = [ pao | queijo | presunto ]</msg>
-<var>pao</var>
-<var>queijo</var>
-<var>presunto</var>
-<status status="PASS" start="2025-10-01T17:55:45.601830" elapsed="0.000673"/>
-</variable>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Listinha padaria: ${listinha_padaria}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.604824" elapsed="0.004095"/>
+<status status="PASS" start="2025-10-02T12:57:33.186235" elapsed="0.207469"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-01T17:55:45.623729" level="INFO">${listinha_padaria}[1] = queijo prato</msg>
-<var>${listinha_padaria}[1]</var>
-<arg>queijo prato</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.620076" elapsed="0.004881"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Lista padaria alterada: ${listinha_padaria}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.627939" elapsed="0.012268"/>
-</kw>
-<kw name="Set List Value" owner="Collections">
-<arg>${listinha_padaria}</arg>
-<arg>1</arg>
-<arg>queijo minas</arg>
-<doc>Sets the value of ``list`` specified by ``index`` to the given ``value``.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.644918" elapsed="0.115291"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Lista collections: ${listinha_padaria}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.763819" elapsed="0.001259"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${listinha_padaria}</arg>
-<arg>requeijao</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.765881" elapsed="0.000722"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${listinha_padaria}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.767404" elapsed="0.002664"/>
-</kw>
-<kw name="Remove From List" owner="Collections">
-<arg>${listinha_padaria}</arg>
-<arg>2</arg>
-<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.780557" elapsed="0.001345"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${listinha_padaria}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.782967" elapsed="0.001431"/>
-</kw>
-<kw name="Remove Values From List" owner="Collections">
-<arg>${listinha_padaria}</arg>
-<arg>requeijao</arg>
-<doc>Removes all occurrences of given ``values`` from ``list``.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.785964" elapsed="0.001886"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${listinha_padaria}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:55:45.788894" elapsed="0.001927"/>
-</kw>
-<status status="PASS" start="2025-10-01T17:55:45.488794" elapsed="0.313025"/>
+<status status="PASS" start="2025-10-02T12:57:28.638532" elapsed="4.755596"/>
 </test>
-<doc>Exemplo de uso de variáveis em Robot Framework</doc>
-<status status="PASS" start="2025-10-01T17:55:44.619881" elapsed="1.185333"/>
+<status status="PASS" start="2025-10-02T12:57:28.629299" elapsed="4.765459"/>
+</suite>
+<status status="PASS" start="2025-10-02T12:57:22.484350" elapsed="10.911384"/>
 </suite>
 <statistics>
 <total>
@@ -256,7 +146,10 @@
 <tag>
 </tag>
 <suite>
-<stat name="Variaveis Robot" id="s1" pass="3" fail="0" skip="0">Variaveis Robot</stat>
+<stat name="Web" id="s1" pass="3" fail="0" skip="0">Web</stat>
+<stat name="Home" id="s1-s1" pass="1" fail="0" skip="0">Web.Home</stat>
+<stat name="Offer" id="s1-s2" pass="1" fail="0" skip="0">Web.Offer</stat>
+<stat name="Search" id="s1-s3" pass="1" fail="0" skip="0">Web.Search</stat>
 </suite>
 </statistics>
 <errors>
