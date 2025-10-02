@@ -5,6 +5,7 @@ Resource    ${RESOURCES_DIR}/commom.resource
 Resource    ${RESOURCES_DIR}/home.resource
 Resource    ${RESOURCES_DIR}/search.resource
 Resource    ${RESOURCES_DIR}/offer.resource
+Resource    ${TESTS_WEB_DIR}/test_data.resource
 
 
 *** Variables ***
@@ -14,3 +15,4 @@ ${URL_BASE}    https://www.mercadolivre.com.br/
 ${BROWSER}    chrome
 
 ${RESOURCES_DIR}    resources
+${TESTS_WEB_DIR}    tests/web

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-02T16:39:02.581903" rpa="false" schemaversion="5">
+<suite id="s1" name="Search" source="/home/paulete/projetos/robot-orange-juice/tests/web/search.robot">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>isso aqui vem antes de tudo</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-02T16:39:02.986275" elapsed="0.000592"/>
+</kw>
+<test id="s1-t1" name="Pesquisar Produto" line="10">
+<kw name="Open Browser To Home Page" owner="commom" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-02T16:39:02.989775" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
+<arg>${URL_BASE}</arg>
+<arg>${BROWSER}</arg>
+<arg>oprtions=${CHROME_OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-02T16:39:02.988982" elapsed="5.453309"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-02T16:39:08.452986" level="INFO">De certo os testes, família!!!!</msg>
+<arg>De certo os testes, família!!!!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-02T16:39:08.445133" elapsed="0.009470"/>
+</kw>
+<status status="PASS" start="2025-10-02T16:39:02.988123" elapsed="5.467298"/>
+</kw>
+<kw name="Type Product ${PRODUCT_SEARCH} in the Search Field" owner="search" source_name="Type Product ${PRODUCT_SEARCH} in the Search Field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-02T16:39:08.477138" level="INFO">Typing text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024' into text field '//input[contains(@type, 'text')]'.</msg>
+<arg>${FLD_SEARCH}</arg>
+<arg>${PRODUCT_SEARCH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T16:39:08.461223" elapsed="1.541514"/>
+</kw>
+<status status="PASS" start="2025-10-02T16:39:08.457584" elapsed="1.545730"/>
+</kw>
+<kw name="Submit Search" owner="search">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-02T16:39:10.005660" level="INFO">Clicking element '//button[contains(@type, 'submit')]'.</msg>
+<arg>${BTN_SEARCH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T16:39:10.005081" elapsed="1.978366"/>
+</kw>
+<status status="PASS" start="2025-10-02T16:39:10.004266" elapsed="1.981299"/>
+</kw>
+<kw name="Page Must Contain the product" owner="search">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-02T16:39:12.215811" level="INFO">Current page contains text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024'.</msg>
+<arg>${PRODUCT_SEARCH}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-02T16:39:11.999102" elapsed="0.217536"/>
+</kw>
+<status status="PASS" start="2025-10-02T16:39:11.991386" elapsed="0.225798"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-02T16:39:12.218664" elapsed="0.122649"/>
+</kw>
+<status status="PASS" start="2025-10-02T16:39:02.987200" elapsed="9.355953"/>
+</test>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>isso aqui vem depois de tudo</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-02T16:39:12.357862" elapsed="0.004097"/>
+</kw>
+<status status="PASS" start="2025-10-02T16:39:02.587493" elapsed="9.787342"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Search" id="s1" pass="1" fail="0" skip="0">Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

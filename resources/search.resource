@@ -1,13 +1,17 @@
 *** Settings ***
 Resource    ../settings.resource
 
+*** Variables ***
+${BTN_SEARCH}    //button[contains(@type, 'submit')]
+${FLD_SEARCH}    //input[contains(@type, 'text')]
+
 
 *** Keywords ***
-Type Product Name in the Search Field
-    Input Text    //input[contains(@type, 'text')]    Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024  
-
 Submit Search
-    Click Element    //button[contains(@type, 'submit')]
+    Click Element    ${BTN_SEARCH}
 
 Page Must Contain the product
-    Page Should Contain    Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024
+    Page Should Contain    ${PRODUCT_SEARCH}
+
+Type Product ${PRODUCT_SEARCH} in the Search Field
+    Input Text    ${FLD_SEARCH}    ${PRODUCT_SEARCH}  

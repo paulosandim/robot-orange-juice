@@ -1,143 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-02T12:57:22.482964" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-02T16:01:27.058974" rpa="false" schemaversion="5">
 <suite id="s1" name="Web" source="/home/paulete/projetos/robot-orange-juice/tests/web">
 <suite id="s1-s1" name="Home" source="/home/paulete/projetos/robot-orange-juice/tests/web/home.robot">
 <test id="s1-s1-t1" name="Acessar Home do Mercado Livre" line="5">
 <kw name="Open Browser To Home Page" owner="commom">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:22.678671" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
+<msg time="2025-10-02T16:01:27.409983" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
 <arg>${URL_BASE}</arg>
 <arg>${BROWSER}</arg>
 <arg>oprtions=${CHROME_OPTIONS}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-02T12:57:22.678275" elapsed="2.625853"/>
+<status status="PASS" start="2025-10-02T16:01:27.407366" elapsed="5.704041"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-02T12:57:25.310135" level="INFO">De certo os testes, família!!!!</msg>
+<msg time="2025-10-02T16:01:33.121778" level="INFO">De certo os testes, família!!!!</msg>
 <arg>De certo os testes, família!!!!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-02T12:57:25.305320" elapsed="0.005129"/>
+<status status="PASS" start="2025-10-02T16:01:33.117600" elapsed="0.005367"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:22.677320" elapsed="2.633683"/>
+<status status="PASS" start="2025-10-02T16:01:27.402477" elapsed="5.725498"/>
 </kw>
 <kw name="Home Page Should Be Open" owner="home">
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:25.351651" level="INFO">Page title is 'Mercado Livre Brasil - Frete Grátis no mesmo dia'.</msg>
+<msg time="2025-10-02T16:01:33.212082" level="INFO">Page title is 'Mercado Livre Brasil - Frete Grátis no mesmo dia'.</msg>
 <arg>Mercado Livre Brasil - Frete Grátis no mesmo dia</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-10-02T12:57:25.313660" elapsed="0.038435"/>
+<status status="PASS" start="2025-10-02T16:01:33.133206" elapsed="0.081772"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:25.312345" elapsed="0.040345"/>
+<status status="PASS" start="2025-10-02T16:01:33.131061" elapsed="0.093797"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:22.676451" elapsed="2.678197"/>
+<status status="PASS" start="2025-10-02T16:01:27.400577" elapsed="5.826520"/>
 </test>
-<status status="PASS" start="2025-10-02T12:57:22.504961" elapsed="2.852319"/>
+<status status="PASS" start="2025-10-02T16:01:27.095523" elapsed="6.146213"/>
 </suite>
 <suite id="s1-s2" name="Offer" source="/home/paulete/projetos/robot-orange-juice/tests/web/offer.robot">
 <test id="s1-s2-t1" name="Acessar Ofertas do Mercado Livre" line="6">
 <kw name="Open Browser To Home Page" owner="commom">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:25.412138" level="INFO">Using existing browser from index 1.</msg>
-<msg time="2025-10-02T12:57:25.412491" level="INFO">Opening url 'https://www.mercadolivre.com.br/'</msg>
+<msg time="2025-10-02T16:01:33.310695" level="INFO">Using existing browser from index 1.</msg>
+<msg time="2025-10-02T16:01:33.311097" level="INFO">Opening url 'https://www.mercadolivre.com.br/'</msg>
 <arg>${URL_BASE}</arg>
 <arg>${BROWSER}</arg>
 <arg>oprtions=${CHROME_OPTIONS}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-02T12:57:25.409645" elapsed="1.135735"/>
+<status status="PASS" start="2025-10-02T16:01:33.308955" elapsed="0.234195"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-02T12:57:26.551154" level="INFO">De certo os testes, família!!!!</msg>
+<msg time="2025-10-02T16:01:33.548567" level="INFO">De certo os testes, família!!!!</msg>
 <arg>De certo os testes, família!!!!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-02T12:57:26.550183" elapsed="0.001215"/>
+<status status="PASS" start="2025-10-02T16:01:33.546819" elapsed="0.002015"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:25.396397" elapsed="1.155299"/>
+<status status="PASS" start="2025-10-02T16:01:33.287886" elapsed="0.264018"/>
 </kw>
 <kw name="Open Offers" owner="offer">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//a[text()='Ofertas']</arg>
+<arg>${BTN_OFFERS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-02T12:57:26.553695" elapsed="0.944020"/>
+<status status="PASS" start="2025-10-02T16:01:33.566463" elapsed="1.671646"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:27.676336" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-02T16:01:35.505084" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-10-02T12:57:27.498059" elapsed="0.178417"/>
+<status status="PASS" start="2025-10-02T16:01:35.238780" elapsed="0.266739"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:27.677032" level="INFO">Clicking element '//a[text()='Ofertas']'.</msg>
-<arg>//a[text()='Ofertas']</arg>
+<msg time="2025-10-02T16:01:35.506830" level="INFO">Clicking element '//a[text()='Ofertas']'.</msg>
+<arg>${BTN_OFFERS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-02T12:57:27.676698" elapsed="0.724567"/>
+<status status="PASS" start="2025-10-02T16:01:35.506282" elapsed="2.246058"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:26.552737" elapsed="1.849058"/>
+<status status="PASS" start="2025-10-02T16:01:33.557142" elapsed="4.196099"/>
 </kw>
 <kw name="Offer Page Should Be Open" owner="offer">
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:28.626005" level="INFO">Page title is 'Ofertas do dia | Mercadolivre Brasil'.</msg>
+<msg time="2025-10-02T16:01:38.280467" level="INFO">Page title is 'Ofertas do dia | Mercadolivre Brasil'.</msg>
 <arg>Ofertas do dia | Mercadolivre Brasil</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-10-02T12:57:28.404673" elapsed="0.221550"/>
+<status status="PASS" start="2025-10-02T16:01:37.758990" elapsed="0.521782"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:28.402756" elapsed="0.223743"/>
+<status status="PASS" start="2025-10-02T16:01:37.756970" elapsed="0.524118"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:25.392249" elapsed="3.234732"/>
+<status status="PASS" start="2025-10-02T16:01:33.283799" elapsed="4.997872"/>
 </test>
-<status status="PASS" start="2025-10-02T12:57:25.360885" elapsed="3.266971"/>
+<status status="PASS" start="2025-10-02T16:01:33.244741" elapsed="5.038289"/>
 </suite>
 <suite id="s1-s3" name="Search" source="/home/paulete/projetos/robot-orange-juice/tests/web/search.robot">
 <test id="s1-s3-t1" name="Pesquisar Produto" line="5">
 <kw name="Open Browser To Home Page" owner="commom">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:28.640680" level="INFO">Using existing browser from index 1.</msg>
-<msg time="2025-10-02T12:57:28.640753" level="INFO">Opening url 'https://www.mercadolivre.com.br/'</msg>
+<msg time="2025-10-02T16:01:38.304122" level="INFO">Using existing browser from index 1.</msg>
+<msg time="2025-10-02T16:01:38.304499" level="INFO">Opening url 'https://www.mercadolivre.com.br/'</msg>
 <arg>${URL_BASE}</arg>
 <arg>${BROWSER}</arg>
 <arg>oprtions=${CHROME_OPTIONS}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-02T12:57:28.640207" elapsed="1.224636"/>
+<status status="PASS" start="2025-10-02T16:01:38.302676" elapsed="2.376479"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-10-02T12:57:29.865411" level="INFO">De certo os testes, família!!!!</msg>
+<msg time="2025-10-02T16:01:40.681753" level="INFO">De certo os testes, família!!!!</msg>
 <arg>De certo os testes, família!!!!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-10-02T12:57:29.865117" elapsed="0.000407"/>
+<status status="PASS" start="2025-10-02T16:01:40.680130" elapsed="0.002415"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:28.639509" elapsed="1.226262"/>
+<status status="PASS" start="2025-10-02T16:01:38.300715" elapsed="2.382673"/>
 </kw>
-<kw name="Type Product Name in the Search Field" owner="search">
+<kw name="Type Product ${PRODUCT_SEARCH} in the Search Field" owner="search" source_name="Type Product ${PRODUCT_SEARCH} in the Search Field">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:29.868344" level="INFO">Typing text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024' into text field '//input[contains(@type, 'text')]'.</msg>
-<arg>//input[contains(@type, 'text')]</arg>
-<arg>Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024</arg>
+<msg time="2025-10-02T16:01:40.696097" level="INFO">Typing text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024' into text field '//input[contains(@type, 'text')]'.</msg>
+<arg>${FLD_SEARCH}</arg>
+<arg>${PRODUCT_SEARCH}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-02T12:57:29.867605" elapsed="1.136949"/>
+<status status="PASS" start="2025-10-02T16:01:40.689498" elapsed="2.348820"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:29.866504" elapsed="1.138293"/>
+<status status="PASS" start="2025-10-02T16:01:40.685326" elapsed="2.353218"/>
 </kw>
 <kw name="Submit Search" owner="search">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:31.006797" level="INFO">Clicking element '//button[contains(@type, 'submit')]'.</msg>
-<arg>//button[contains(@type, 'submit')]</arg>
+<msg time="2025-10-02T16:01:43.044635" level="INFO">Clicking element '//button[contains(@type, 'submit')]'.</msg>
+<arg>${BTN_SEARCH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-02T12:57:31.005916" elapsed="2.173565"/>
+<status status="PASS" start="2025-10-02T16:01:43.040589" elapsed="3.402252"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:31.005353" elapsed="2.178606"/>
+<status status="PASS" start="2025-10-02T16:01:43.039161" elapsed="3.404470"/>
 </kw>
 <kw name="Page Must Contain the product" owner="search">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-10-02T12:57:33.393121" level="INFO">Current page contains text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024'.</msg>
-<arg>Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024</arg>
+<msg time="2025-10-02T16:01:46.707856" level="INFO">Current page contains text 'Violao Acustico Seven Mini Folk Sv-17 Dbk Dark Black 2024'.</msg>
+<arg>${PRODUCT_SEARCH}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-10-02T12:57:33.187813" elapsed="0.205608"/>
+<status status="PASS" start="2025-10-02T16:01:46.451702" elapsed="0.256818"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:33.186235" elapsed="0.207469"/>
+<status status="PASS" start="2025-10-02T16:01:46.447342" elapsed="0.262454"/>
 </kw>
-<status status="PASS" start="2025-10-02T12:57:28.638532" elapsed="4.755596"/>
+<status status="PASS" start="2025-10-02T16:01:38.298934" elapsed="8.412533"/>
 </test>
-<status status="PASS" start="2025-10-02T12:57:28.629299" elapsed="4.765459"/>
+<status status="PASS" start="2025-10-02T16:01:38.284387" elapsed="8.430777"/>
 </suite>
-<status status="PASS" start="2025-10-02T12:57:22.484350" elapsed="10.911384"/>
+<status status="PASS" start="2025-10-02T16:01:27.060269" elapsed="19.660215"/>
 </suite>
 <statistics>
 <total>
