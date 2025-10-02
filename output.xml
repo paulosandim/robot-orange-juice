@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-02T12:12:31.155322" rpa="false" schemaversion="5">
+<suite id="s1" name="Variaveis Robot" source="/home/paulete/projetos/robot-orange-juice/variaveis_robot.robot">
+<test id="s1-t1" name="Variaveis Dinamicas" line="96">
+<variable name="${x}">
+<msg time="2025-10-02T12:12:31.209537" level="INFO">${x} = Y</msg>
+<var>Y</var>
+<status status="PASS" start="2025-10-02T12:12:31.209277" elapsed="0.002347"/>
+</variable>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-02T12:12:31.213487" elapsed="0.001332"/>
+</kw>
+<variable name="${VAR_${x}}">
+<msg time="2025-10-02T12:12:31.216990" level="INFO">${VAR_Y} = Z</msg>
+<var>Z</var>
+<status status="PASS" start="2025-10-02T12:12:31.216196" elapsed="0.001492"/>
+</variable>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>variavel var_y: ${VAR_${x}}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-02T12:12:31.219529" elapsed="0.001395"/>
+</kw>
+<doc>A partir da versão 7</doc>
+<status status="PASS" start="2025-10-02T12:12:31.208169" elapsed="0.014048"/>
+</test>
+<doc>Exemplo de uso de variáveis em Robot Framework</doc>
+<status status="PASS" start="2025-10-02T12:12:31.161223" elapsed="0.062959"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Variaveis Robot" id="s1" pass="1" fail="0" skip="0">Variaveis Robot</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

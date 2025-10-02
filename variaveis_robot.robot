@@ -92,3 +92,10 @@ Variaveis Dicionario
 
     Set To Dictionary    ${pessoa}    veiculo=${carro}
     Log To Console    ${pessoa}
+
+Variaveis Dinamicas
+    [Documentation]    A partir da versão 7
+    VAR    ${x}    Y
+    Log To Console    ${x}
+    VAR    ${VAR_${x}}    Z
+    Log To Console    variavel var_y: ${VAR_${x}}
