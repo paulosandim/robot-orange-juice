@@ -5,7 +5,7 @@ Library    .venv/lib/python3.10/site-packages/robot/libraries/Collections.py
 *** Variables ***
 ${VARIAVEL_ESCALAR}    Paulete
 @{VARIAVEL_LISTA}      Maçã    Banana    Laranja
-&{VARIAVEL_DICIONARIO}  nome=Paulete    idade=30    cidade=Campo Grande
+&{VARIAVEL_DICIONARIO}  NOME=Paulete    IDADE=30    COMUNIDADE=Orange Juice
 
 *** Test Cases ***
 Exemplo de Uso de Variáveis
@@ -65,4 +65,30 @@ Variaveis Lista
     Remove Values From List    ${listinha_padaria}    requeijao
     Log To Console    ${listinha_padaria}
 
+Variaveis Dicionario
+    Log To Console    Meu dicionario: ${VARIAVEL_DICIONARIO}
+    Length Should Be    ${VARIAVEL_DICIONARIO}    3
+    Should Be Equal As Strings    ${VARIAVEL_DICIONARIO.COMUNIDADE}    Orange Juice    
+    Log To Console    A comunidade vitaminada: ${VARIAVEL_DICIONARIO.COMUNIDADE}
+# CRiando um novo dicionario
+    &{carro}    Create Dictionary    marca=fiat    modelo=uno    cor=vermelha
+    Log To Console    ${carro}
+    Log To Console    A marca do carro é: ${carro}
+    Should Be Equal As Strings    ${carro.modelo}    uno
+# Criando dicionario com VAR nova versão
+    VAR    &{moto}    marca=honda    modelo=cb300    cor=preta
+    Log To Console    A motoca é: ${moto}
+# Alterando valor do dicionario
+    Set To Dictionary    ${moto}    cor=vermelha
+    Log To Console    motoca tem a cor: ${moto.cor}
+# Dicionario vazio
+    VAR    &{pessoa}
+    Log To Console    dicionario vazio: ${pessoa}
+    Set To Dictionary    ${pessoa}    nome=jhony    idade=30    time=fluzao
+    Log To Console    pessoa: ${pessoa}
+# Removendo chave de um dicionario
+    Remove From Dictionary    ${pessoa}    idade
+    Log To Console    pessoa: ${pessoa}
 
+    Set To Dictionary    ${pessoa}    veiculo=${carro}
+    Log To Console    ${pessoa}

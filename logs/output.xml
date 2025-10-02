@@ -1,253 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-01T17:53:45.664513" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-10-01T17:55:44.601583" rpa="false" schemaversion="5">
 <suite id="s1" name="Variaveis Robot" source="/home/paulete/projetos/robot-orange-juice/variaveis_robot.robot">
 <test id="s1-t1" name="Exemplo de Uso de Variáveis" line="11">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nVariavel Escalar: ${VARIAVEL_ESCALAR}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.695741" elapsed="0.000549"/>
+<status status="PASS" start="2025-10-01T17:55:45.215261" elapsed="0.001862"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nVariavel Lista: ${VARIAVEL_LISTA}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.696725" elapsed="0.000461"/>
+<status status="PASS" start="2025-10-01T17:55:45.225967" elapsed="0.004253"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nPrimeiro item da lista: ${VARIAVEL_LISTA}[0]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.697998" elapsed="0.000820"/>
+<status status="PASS" start="2025-10-01T17:55:45.230875" elapsed="0.000973"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nVariavel Dicionario: ${VARIAVEL_DICIONARIO}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.699162" elapsed="0.000391"/>
+<status status="PASS" start="2025-10-01T17:55:45.232382" elapsed="0.000806"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nNome do dicionario: ${VARIAVEL_DICIONARIO['nome']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.699835" elapsed="0.000696"/>
+<status status="PASS" start="2025-10-01T17:55:45.234135" elapsed="0.017421"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nIdade do dicionario: ${VARIAVEL_DICIONARIO['idade']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.700784" elapsed="0.000516"/>
+<status status="PASS" start="2025-10-01T17:55:45.300290" elapsed="0.011523"/>
 </kw>
-<status status="PASS" start="2025-10-01T17:53:45.694558" elapsed="0.007031"/>
+<status status="PASS" start="2025-10-01T17:55:45.212289" elapsed="0.100604"/>
 </test>
 <test id="s1-t2" name="Variavel Escalar" line="19">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${VARIAVEL_ESCALAR}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.702445" elapsed="0.000247"/>
+<status status="PASS" start="2025-10-01T17:55:45.319938" elapsed="0.003161"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-01T17:53:45.703110" level="INFO">${comunidade} = Orange Juice</msg>
+<msg time="2025-10-01T17:55:45.335567" level="INFO">${comunidade} = Orange Juice</msg>
 <var>${comunidade}</var>
 <arg>Orange Juice</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.702943" elapsed="0.000198"/>
+<status status="PASS" start="2025-10-01T17:55:45.332759" elapsed="0.003012"/>
 </kw>
 <variable name="${nome}">
-<msg time="2025-10-01T17:53:45.703380" level="INFO">${nome} = Paulete</msg>
+<msg time="2025-10-01T17:55:45.337086" level="INFO">${nome} = Paulete</msg>
 <var>Paulete</var>
-<status status="PASS" start="2025-10-01T17:53:45.703252" elapsed="0.000184"/>
+<status status="PASS" start="2025-10-01T17:55:45.336305" elapsed="0.001062"/>
 </variable>
 <variable name="${sobrenome}">
-<msg time="2025-10-01T17:53:45.703665" level="INFO">${sobrenome} = Sandim</msg>
+<msg time="2025-10-01T17:55:45.338691" level="INFO">${sobrenome} = Sandim</msg>
 <var>Sandim</var>
-<status status="PASS" start="2025-10-01T17:53:45.703556" elapsed="0.000135"/>
+<status status="PASS" start="2025-10-01T17:55:45.338151" elapsed="0.000763"/>
 </variable>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nChamando 2 variaveis: ${nome} ${sobrenome}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.703996" elapsed="0.000310"/>
+<status status="PASS" start="2025-10-01T17:55:45.345013" elapsed="0.010375"/>
 </kw>
 <variable name="${nome_completo}">
-<msg time="2025-10-01T17:53:45.704625" level="INFO">${nome_completo} = Paulete Sandim</msg>
+<msg time="2025-10-01T17:55:45.356758" level="INFO">${nome_completo} = Paulete Sandim</msg>
 <var>${nome} ${sobrenome}</var>
-<status status="PASS" start="2025-10-01T17:53:45.704400" elapsed="0.000256"/>
+<status status="PASS" start="2025-10-01T17:55:45.356144" elapsed="0.000755"/>
 </variable>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\nConcatenando as 2 variaveis: ${nome_completo} - ${comunidade}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.704835" elapsed="0.000268"/>
+<status status="PASS" start="2025-10-01T17:55:45.361016" elapsed="0.005313"/>
 </kw>
 <variable name="${valor1}">
-<msg time="2025-10-01T17:53:45.705363" level="INFO">${valor1} = 5</msg>
+<msg time="2025-10-01T17:55:45.368623" level="INFO">${valor1} = 5</msg>
 <var>5</var>
-<status status="PASS" start="2025-10-01T17:53:45.705263" elapsed="0.000144"/>
+<status status="PASS" start="2025-10-01T17:55:45.368042" elapsed="0.000783"/>
 </variable>
 <variable name="${valor2}">
-<msg time="2025-10-01T17:53:45.705654" level="INFO">${valor2} = 1</msg>
+<msg time="2025-10-01T17:55:45.370912" level="INFO">${valor2} = 1</msg>
 <var>1</var>
-<status status="PASS" start="2025-10-01T17:53:45.705585" elapsed="0.000110"/>
+<status status="PASS" start="2025-10-01T17:55:45.370244" elapsed="0.001412"/>
 </variable>
 <variable name="${resultado}">
-<msg time="2025-10-01T17:53:45.706082" level="INFO">${resultado} = 5 - 1</msg>
+<msg time="2025-10-01T17:55:45.376074" level="INFO">${resultado} = 5 - 1</msg>
 <var>${valor1} - ${valor2}</var>
-<status status="PASS" start="2025-10-01T17:53:45.705908" elapsed="0.000204"/>
+<status status="PASS" start="2025-10-01T17:55:45.375008" elapsed="0.001340"/>
 </variable>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Resultado: ${resultado}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.706291" elapsed="0.000315"/>
+<status status="PASS" start="2025-10-01T17:55:45.377486" elapsed="0.004902"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-01T17:53:45.707124" level="INFO">${resultado} = 4</msg>
+<msg time="2025-10-01T17:55:45.397197" level="INFO">${resultado} = 4</msg>
 <var>${resultado}</var>
 <arg>${valor1} - ${valor2}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.706823" elapsed="0.000331"/>
+<status status="PASS" start="2025-10-01T17:55:45.393414" elapsed="0.004538"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Resultado: ${resultado}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.707332" elapsed="0.000236"/>
+<status status="PASS" start="2025-10-01T17:55:45.400279" elapsed="0.084377"/>
 </kw>
-<status status="PASS" start="2025-10-01T17:53:45.701994" elapsed="0.005761"/>
+<status status="PASS" start="2025-10-01T17:55:45.315824" elapsed="0.171061"/>
 </test>
 <test id="s1-t3" name="Variaveis Lista" line="34">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${VARIAVEL_LISTA}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.708366" elapsed="0.000254"/>
+<status status="PASS" start="2025-10-01T17:55:45.496171" elapsed="0.008310"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${VARIAVEL_LISTA}[0]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.708801" elapsed="0.000243"/>
+<status status="PASS" start="2025-10-01T17:55:45.507462" elapsed="0.009980"/>
 </kw>
 <for flavor="IN ENUMERATE">
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${index}: ${item}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.709540" elapsed="0.000316"/>
+<status status="PASS" start="2025-10-01T17:55:45.526748" elapsed="0.007493"/>
 </kw>
 <var name="${index}">0</var>
 <var name="${item}">Maçã</var>
-<status status="PASS" start="2025-10-01T17:53:45.709441" elapsed="0.000460"/>
+<status status="PASS" start="2025-10-01T17:55:45.525536" elapsed="0.016332"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${index}: ${item}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.710123" elapsed="0.000301"/>
+<status status="PASS" start="2025-10-01T17:55:45.544132" elapsed="0.004840"/>
 </kw>
 <var name="${index}">1</var>
 <var name="${item}">Banana</var>
-<status status="PASS" start="2025-10-01T17:53:45.710026" elapsed="0.000446"/>
+<status status="PASS" start="2025-10-01T17:55:45.542906" elapsed="0.006424"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${index}: ${item}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.710729" elapsed="0.000345"/>
+<status status="PASS" start="2025-10-01T17:55:45.561094" elapsed="0.002874"/>
 </kw>
 <var name="${index}">2</var>
 <var name="${item}">Laranja</var>
-<status status="PASS" start="2025-10-01T17:53:45.710614" elapsed="0.000560"/>
+<status status="PASS" start="2025-10-01T17:55:45.550046" elapsed="0.014246"/>
 </iter>
 <var>${index}</var>
 <var>${item}</var>
 <value>@{VARIAVEL_LISTA}</value>
-<status status="PASS" start="2025-10-01T17:53:45.709165" elapsed="0.002081"/>
+<status status="PASS" start="2025-10-01T17:55:45.520804" elapsed="0.043778"/>
 </for>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2025-10-01T17:53:45.712953" level="INFO">${listinha_mercado} = ['macarrao', 'tomate', 'alho', 'cebola']</msg>
+<msg time="2025-10-01T17:55:45.578759" level="INFO">${listinha_mercado} = ['macarrao', 'tomate', 'alho', 'cebola']</msg>
 <var>${listinha_mercado}</var>
 <arg>macarrao</arg>
 <arg>tomate</arg>
 <arg>alho</arg>
 <arg>cebola</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.712510" elapsed="0.000486"/>
+<status status="PASS" start="2025-10-01T17:55:45.573922" elapsed="0.005439"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${listinha_mercado}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.713318" elapsed="0.000271"/>
+<status status="PASS" start="2025-10-01T17:55:45.581477" elapsed="0.001713"/>
 </kw>
 <kw name="Length Should Be" owner="BuiltIn">
-<msg time="2025-10-01T17:53:45.714143" level="INFO">Length is 4.</msg>
+<msg time="2025-10-01T17:55:45.599339" level="INFO">Length is 4.</msg>
 <arg>${listinha_mercado}</arg>
 <arg>4</arg>
 <doc>Verifies that the length of the given item is correct.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.713843" elapsed="0.000375"/>
+<status status="PASS" start="2025-10-01T17:55:45.597070" elapsed="0.004088"/>
 </kw>
 <variable name="@{listinha_padaria}">
-<msg time="2025-10-01T17:53:45.714617" level="INFO">@{listinha_padaria} = [ pao | queijo | presunto ]</msg>
+<msg time="2025-10-01T17:55:45.602296" level="INFO">@{listinha_padaria} = [ pao | queijo | presunto ]</msg>
 <var>pao</var>
 <var>queijo</var>
 <var>presunto</var>
-<status status="PASS" start="2025-10-01T17:53:45.714435" elapsed="0.000240"/>
+<status status="PASS" start="2025-10-01T17:55:45.601830" elapsed="0.000673"/>
 </variable>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Listinha padaria: ${listinha_padaria}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.715133" elapsed="0.000396"/>
+<status status="PASS" start="2025-10-01T17:55:45.604824" elapsed="0.004095"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-01T17:53:45.716115" level="INFO">${listinha_padaria}[1] = queijo prato</msg>
+<msg time="2025-10-01T17:55:45.623729" level="INFO">${listinha_padaria}[1] = queijo prato</msg>
 <var>${listinha_padaria}[1]</var>
 <arg>queijo prato</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.715884" elapsed="0.000264"/>
+<status status="PASS" start="2025-10-01T17:55:45.620076" elapsed="0.004881"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Lista padaria alterada: ${listinha_padaria}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.716442" elapsed="0.000221"/>
+<status status="PASS" start="2025-10-01T17:55:45.627939" elapsed="0.012268"/>
 </kw>
 <kw name="Set List Value" owner="Collections">
 <arg>${listinha_padaria}</arg>
 <arg>1</arg>
 <arg>queijo minas</arg>
 <doc>Sets the value of ``list`` specified by ``index`` to the given ``value``.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.716851" elapsed="0.000179"/>
+<status status="PASS" start="2025-10-01T17:55:45.644918" elapsed="0.115291"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Lista collections: ${listinha_padaria}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.717211" elapsed="0.000217"/>
+<status status="PASS" start="2025-10-01T17:55:45.763819" elapsed="0.001259"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${listinha_padaria}</arg>
 <arg>requeijao</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.717588" elapsed="0.000163"/>
+<status status="PASS" start="2025-10-01T17:55:45.765881" elapsed="0.000722"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${listinha_padaria}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.717919" elapsed="0.000203"/>
+<status status="PASS" start="2025-10-01T17:55:45.767404" elapsed="0.002664"/>
 </kw>
 <kw name="Remove From List" owner="Collections">
 <arg>${listinha_padaria}</arg>
 <arg>2</arg>
 <doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.718286" elapsed="0.000223"/>
+<status status="PASS" start="2025-10-01T17:55:45.780557" elapsed="0.001345"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${listinha_padaria}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.718685" elapsed="0.000200"/>
+<status status="PASS" start="2025-10-01T17:55:45.782967" elapsed="0.001431"/>
 </kw>
 <kw name="Remove Values From List" owner="Collections">
 <arg>${listinha_padaria}</arg>
 <arg>requeijao</arg>
 <doc>Removes all occurrences of given ``values`` from ``list``.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.719043" elapsed="0.000152"/>
+<status status="PASS" start="2025-10-01T17:55:45.785964" elapsed="0.001886"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${listinha_padaria}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-10-01T17:53:45.719451" elapsed="0.000207"/>
+<status status="PASS" start="2025-10-01T17:55:45.788894" elapsed="0.001927"/>
 </kw>
-<status status="PASS" start="2025-10-01T17:53:45.708015" elapsed="0.011818"/>
+<status status="PASS" start="2025-10-01T17:55:45.488794" elapsed="0.313025"/>
 </test>
 <doc>Exemplo de uso de variáveis em Robot Framework</doc>
-<status status="PASS" start="2025-10-01T17:53:45.665528" elapsed="0.054832"/>
+<status status="PASS" start="2025-10-01T17:55:44.619881" elapsed="1.185333"/>
 </suite>
 <statistics>
 <total>
